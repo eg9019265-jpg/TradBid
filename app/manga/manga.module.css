@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+.page {
+  background-color: #121212;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-family: 'Pixelify Sans', sans-serif;
+  position: relative;
+}
+
+.autoBtn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 100;
+  padding: 8px 16px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #19cba1;
+  color: #ffffff;
+  border: 3px solid #000000;
+}
+
+.autoBtnManual {
+  background-color: #5aebc2;
+  color: #000000;
+}
+
+.skipBtn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #de750c;
+  color: #0c0000;
+  border: 2px solid #0a0000;
+  padding: 8px 16px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.skipBtn:hover {
+  background-color: #71513b;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(180px, auto);
+  gap: 15px;
+  width: 90vw;
+  max-width: 700px;
+  height: 80vh;
+  background-color: #000000;
+  padding: 15px;
+  border: 6px solid #000000;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.8);
+  cursor: pointer;
+  overflow-y: auto;
+}
+
+.panel {
+  display: none;
+  background-color: #ffffff;
+  overflow: hidden;
+  transform: translateX(100px) rotate(5deg);
+  opacity: 0;
+}
+
+.panelActive {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transform: translateX(0);
+  animation: crashIn 0.12s ease-out forwards;
+}
+
+@keyframes crashIn {
+  0% {
+    opacity: 0;
+    transform: translateX(120px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: #ffffff;
+}
+
+.p1 { grid-column: span 2; }
+.p2 { grid-column: span 1; }
+.p3 { grid-column: span 1; }
+.p4 { grid-column: span 2; }

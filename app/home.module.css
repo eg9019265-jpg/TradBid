@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+.wrap {
+  color: #66e84c;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -100;
+  object-fit: cover;
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  font-size: 2rem;
+}
+
+.stepBtn {
+  font-size: 20px;
+  padding: 10px 20px;
+  border: 2px solid #46eb43;
+  background-color: #000000;
+  text-align: center;
+  cursor: pointer;
+  display: inline-block;
+  color: #32ec35;
+  transition: transform 0.2s ease;
+  font-family: inherit;
+}
+
+.stepBtn:hover {
+  transform: scale(1.05);
+}
